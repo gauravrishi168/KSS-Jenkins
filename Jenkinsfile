@@ -1,5 +1,11 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'maven'
+      args '3.5-jdk-8'
+    }
+    
+  }
   stages {
     stage('Greeting') {
       steps {
