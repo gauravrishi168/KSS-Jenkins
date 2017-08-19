@@ -27,6 +27,15 @@ pipeline {
       }
     }
   
+    
+    stage('Build image') {
+      steps {
+        /* This builds the actual image; synonymous to
+         * docker build on the command line */
+
+       def app = = docker.build("gaurav168/hellonode")
+    }
+    }
   stage('Push image') {
        steps {
         withDockerRegistry([credentialsId: '0f690faf-cafd-454f-bc3e-568506336470']) {
