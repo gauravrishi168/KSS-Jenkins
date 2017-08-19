@@ -33,7 +33,7 @@ pipeline {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-       def app = = docker.build("gaurav168/hellonode")
+       def app = docker.build("gaurav168/hellonode")
     }
     }
   stage('Push image') {
