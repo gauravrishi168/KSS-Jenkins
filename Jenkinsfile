@@ -12,6 +12,11 @@ pipeline {
         echo 'Greeting'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'mvn test'
+      }
+    }
   }
   post {
     always {
