@@ -26,7 +26,6 @@ pipeline {
         archiveArtifacts(allowEmptyArchive: true, artifacts: 'target/*.jar')
       }
     }
-  }
   
   stage('Push image') {
        steps {
@@ -36,6 +35,11 @@ pipeline {
         }
         }
   }
+  
+  
+  }
+  
+  
   
   post {
     always {
