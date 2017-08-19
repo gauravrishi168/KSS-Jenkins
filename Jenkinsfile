@@ -27,12 +27,7 @@ pipeline {
       }
     }
   
-    stage('Build image') {
-      steps {
-
-        app = docker.build("gaurav168/hellonode")
-    }
-    }
+  
     
     
     
