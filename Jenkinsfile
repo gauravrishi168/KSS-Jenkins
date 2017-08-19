@@ -27,10 +27,6 @@ pipeline {
       }
     }
   }
-  
- 
-   
-   
   post {
     always {
       archive 'target/**/*.jar'
