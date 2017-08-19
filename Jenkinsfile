@@ -29,13 +29,13 @@ pipeline {
   }
   
   stage('Push image') {
-       
+       steps {
         withDockerRegistry([credentialsId: '0f690faf-cafd-454f-bc3e-568506336470']) {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
         }
-  
+  }
   
   post {
     always {
