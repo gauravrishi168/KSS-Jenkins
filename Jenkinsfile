@@ -26,17 +26,12 @@ pipeline {
         archiveArtifacts(allowEmptyArchive: true, artifacts: 'target/*.jar')
       }
     }
-  
-  
-    
-    
-    
-    
-  
+    stage('Docker Build') {
+      steps {
+        sh 'docker build -t myjenkins .'
+      }
+    }
   }
-  
-  
-  
   post {
     always {
       archive 'target/**/*.jar'
